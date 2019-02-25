@@ -102,10 +102,13 @@ func (this *PrivateAccount) Exit() {
 		}else{
 			fmt.Println("输入无效请重新输入y/N")
 		}
-		if decision == "y" {
-			this.loop = false
-		}
 	}
-	this.loop = true
+	if decision == "y" {
+		this.loop = false
+	}
+	if decision == "N" {
+		this.loop = true
+	}
+
 
 }
